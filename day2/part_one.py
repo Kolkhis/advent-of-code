@@ -25,7 +25,6 @@ def sanitize_bag(dirty_bag):
 
 
 def check_line(line):
-    cubes = {"red": 0, "green": 0, "blue": 0}
     game_id = line.split(":")[0].split(" ")[1]
     bag_contents = sanitize_bag(line.split(":")[1].split(","))
     cube_pattern = re.compile(r"(\d{1,2})[ ;](green|red|blue)")
@@ -36,7 +35,6 @@ def check_line(line):
             color = match.group(2)
             if count > LIMITS[color]:
                 return False, 0
-            cubes[color] += count
     return True, game_id
 
 
@@ -56,3 +54,4 @@ if __name__ == "__main__":
         if possible:
             possible_games += int(id)
     print(f"Number of possible games: {possible_games}")
+
