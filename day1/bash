@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-
-
-while read -r l; do
-    printf "%s" "$l" | sed -E 's/^\w+(\d+)(\d+)\w+(\d)$/\1\2\3/g'
-
-done <./input.txt
-

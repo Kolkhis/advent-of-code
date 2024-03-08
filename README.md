@@ -1,6 +1,6 @@
 
-# Advent of Code 2023
+# Advent of Code 
 
-I'll be attempting to do these in both Python and Bash.  
-I might mix and match.  
+My solutions to the [Advent of Code](https://adventofcode.com) challenges. 
+I probably won't do them all  
 
